@@ -30,19 +30,19 @@ class PlayListScreen : AppCompatActivity() {
         btnBack.setOnClickListener {
             finish()
         }
-
+        //When the user clicks this button they will see the items in their list
         btnView.setOnClickListener {
             var outputString: String = ""
             for (i in 0 .. arrayPostion){
-                outputString += "Song title" + songTitles[i] + "\n"
-                outputString += "Artist Name" + artistNames[i] + "\n"
-                outputString += "Song rating" + songRatings[i] + "\n"
-                outputString += "Comments" + comments[i] + "\n\n"
+                outputString += "Song title:" + songTitles[i] + "\n"
+                outputString += "Artist Name:" + artistNames[i] + "\n"
+                outputString += "Song rating:" + songRatings[i] + "\n"
+                outputString += "Comments:" + comments[i] + "\n\n"
             }
             lblOutput.text = outputString
 
         }
-
+        //This calculates the users average rating of songs in the list
         btnCalc.setOnClickListener {
            lblOutput.text = "Your average rating is" + songRatings.average()
         }
