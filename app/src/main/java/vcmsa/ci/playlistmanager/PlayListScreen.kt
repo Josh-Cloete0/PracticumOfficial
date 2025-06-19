@@ -1,6 +1,8 @@
 package vcmsa.ci.playlistmanager
 
+import android.nfc.Tag
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -23,6 +25,26 @@ class PlayListScreen : AppCompatActivity() {
         val btnView = findViewById<Button>(R.id.btnView)
         val btnCalc = findViewById<Button>(R.id.btnCalc)
 
-        btnBack.setOnClickListener {  }
+
+        //This takes the user back to the first screen
+        btnBack.setOnClickListener {
+            finish()
+        }
+
+        btnView.setOnClickListener {
+            var outputString: String = ""
+            for (i in 0 .. arrayPostion){
+                outputString += "Song title" + songTitles[i] + "\n"
+                outputString += "Artist Name" + artistNames[i] + "\n"
+                outputString += "Song rating" + songRatings[i] + "\n"
+                outputString += "Comments" + comments[i] + "\n\n"
+            }
+            lblOutput.text = outputString
+
+        }
+
+        btnCalc.setOnClickListener {
+           lblOutput.text = "Your average rating is" + songRatings.average()
+        }
     }
 }
