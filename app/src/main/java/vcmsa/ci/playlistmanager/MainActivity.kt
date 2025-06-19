@@ -1,5 +1,6 @@
 package vcmsa.ci.playlistmanager
 //Josh Cloete ST10473468
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -79,6 +80,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
         //This Allows the user to navigate to a screen to view their list
+        btnNext.setOnClickListener {
+            val intent = Intent(this,PlayListScreen::class.java)
+            startActivity(intent)
+        }
+        //This lets the user exit the app
+        btnExit.setOnClickListener {
+            finishAffinity()
+        }
+
+
 
 
 
