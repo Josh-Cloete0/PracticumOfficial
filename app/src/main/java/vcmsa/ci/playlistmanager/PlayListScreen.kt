@@ -1,6 +1,8 @@
 package vcmsa.ci.playlistmanager
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,11 @@ class PlayListScreen : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val lblOutput =findViewById<TextView>(R.id.lblOutput)
+        val btnBack = findViewById<Button>(R.id.btnBack)
+        val btnView = findViewById<Button>(R.id.btnView)
+        val btnCalc = findViewById<Button>(R.id.btnCalc)
+
+        btnBack.setOnClickListener {  }
     }
 }
