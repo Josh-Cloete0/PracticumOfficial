@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
         val btnNext = findViewById<Button>(R.id.btnNext)
         val btnExit = findViewById<Button>(R.id.btnExit)
         val TAG = "PlaylistManager"
-
-        btnAdd.setOnClickListener{
+// (The IIE,2025)
+        btnAdd.setOnClickListener{// (The IIE,2025)
             val songTitle :String = txtTitle.text.toString()
             val artistName :String = txtArtistName.text.toString()
             val songRating :String = txtRating.text.toString()
@@ -80,12 +80,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
         //This Allows the user to navigate to a screen to view their list
-        btnNext.setOnClickListener {
+        btnNext.setOnClickListener {// (The IIE,2025)
             val intent = Intent(this,PlayListScreen::class.java)
             startActivity(intent)
         }
         //This lets the user exit the app
-        btnExit.setOnClickListener {
+        btnExit.setOnClickListener {// (The IIE,2025)
             finishAffinity()
         }
 
@@ -94,4 +94,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-}
+}//The IIE,2025.Introduction to Mobile Application Development[IMAD5112 Module Manual].The Independent Institute of Education: Unpublished.

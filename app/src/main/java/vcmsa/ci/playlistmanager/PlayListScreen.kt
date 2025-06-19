@@ -27,11 +27,11 @@ class PlayListScreen : AppCompatActivity() {
 
 
         //This takes the user back to the first screen
-        btnBack.setOnClickListener {
+        btnBack.setOnClickListener {// (The IIE,2025)
             finish()
         }
         //When the user clicks this button they will see the items in their list
-        btnView.setOnClickListener {
+        btnView.setOnClickListener {// (The IIE,2025)
             var outputString: String = ""
             for (i in 0 .. arrayPostion){
                 outputString += "Song title:" + songTitles[i] + "\n"
@@ -43,8 +43,8 @@ class PlayListScreen : AppCompatActivity() {
 
         }
         //This calculates the users average rating of songs in the list
-        btnCalc.setOnClickListener {
+        btnCalc.setOnClickListener {// (The IIE,2025)
            lblOutput.text = "Your average rating is" + songRatings.average()
         }
     }
-}
+}//The IIE,2025.Introduction to Mobile Application Development[IMAD5112 Module Manual].The Independent Institute of Education: Unpublished.
